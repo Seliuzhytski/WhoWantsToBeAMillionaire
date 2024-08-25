@@ -1,21 +1,30 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class WhoWantsToBeAMillionaire : MonoBehaviour
+public class StartWhoWantsToBeAMillionaire : MonoBehaviour
 {
+    #region Variables
+
     [SerializeField] private Button _startButton;
+
+    #endregion
+
+    #region Unity lifecycle
 
     private void Start()
     {
         _startButton.onClick.AddListener(StartGame);
     }
 
+    #endregion
+
+    #region Private methods
+
     private void StartGame()
     {
         SceneManager.LoadScene("1_GameScene");
     }
+
+    #endregion
 }
